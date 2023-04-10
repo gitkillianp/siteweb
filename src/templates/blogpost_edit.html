@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Éditer un article</title>
+{% endblock %}
+
+{% block content %}
+<article>
+  <h1>Éditer un article</h1>
+
+  <form method="POST">
+      {% csrf_token %}
+      {{ form }}
+  <input type="submit" value="Éditer" class="btn btn-submit">
+  </form>
+</article>
+{% endblock %}
