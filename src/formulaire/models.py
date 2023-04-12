@@ -1,13 +1,13 @@
 from django.db import models
 
 PROBLEMES = (
-    ("WiFi", "Problème avec mon réseau (WiFi / Ethernet / autre)"),
+    ("WiFi", "Problème avec mon réseau Wifi"),
     ("Virus", "Suspicion de virus sur mon réseau"),
     ("Nettoyage", "Nettoyage de mon ordinateur"),
-    ("Leçon", "Besoin d'un cours d'informatique"),
-    ("Cours logiciel", "Besoin d'un cours sur un logiciel"),
-    ("Dépannage", "Dépannage informatique matériel"),
-    ("Récupération données", "Récupération de données sur ordinateur ne fonctionnant plus"),
+    ("Développement web", "Initiation au développement web"),
+    ("Cours", "Cours informatique tout niveau"),
+    ("Dépannage", "Dépannage informatique, problème matériel"),
+    ("Récupération données", "Récupération de données"),
     ("Autre", "(Autre)"),
 )
 
@@ -23,14 +23,15 @@ LOCALITE = (
     ("Nozay", "Nozay"),
     ("Linas", "Linas"),
     ("Montlhéry", "Montlhéry"),
+    ("Autre", "(Autre)"),
 )
 
 
 class FormulaireModel(models.Model):
     Email = models.EmailField()
     Type = models.CharField(max_length=50, choices=PROBLEMES)
-    Localite = models.CharField(null=True, max_length=50, choices=LOCALITE)
-    Description = models.TextField(max_length=300)
+    Localité = models.CharField(null=True, max_length=50, choices=LOCALITE)
+    Description = models.TextField(max_length=500)
 
     class Meta:
         verbose_name = "Formulaire"

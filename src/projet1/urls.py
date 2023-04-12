@@ -16,14 +16,30 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from projet1 import settings
-
 from .views import index, about
 
+# auto-modif from projet1 import settings = from . import settings
+from . import settings
+
+# sitemaps
+from django.contrib.sitemaps.views import sitemap
+from blog.sitemaps import BlogSitemap, IndexSitemap, AboutSitemap, BlogArticleSitemap
+
+sitemaps = {
+    'index': IndexSitemap,
+    'blog': BlogSitemap,
+    'about': AboutSitemap,
+    'blog_article': BlogArticleSitemap,
+}
+
+
 urlpatterns = [
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('', index, name="index"),
     path('blog/', include('blog.urls')),
     path('formulaire/', include('formulaire.urls')),
     path('admin/', admin.site.urls),
     path('about/', about, name="about"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

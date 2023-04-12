@@ -9,3 +9,57 @@
 .navbar-header {
 	margin-top: -20px;
 }
+
+.tableau {
+    padding-left: 0;
+
+
+}
+
+.tableau th, .tableau td {
+  border: 2px solid black; /* Définir la bordure pour les cellules */
+  padding: 20px; /* Ajouter du rembourrage pour une meilleure lisibilité */
+
+}
+
+.container-content {
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.post-image {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.post-excerpt {
+    max-width: 1000px; /* ou toute autre valeur en pixels, em, %, etc. */
+    line-height: 2; /* ou toute autre valeur en pixels, em, %, etc. */
+}
+
+.detail-detail {
+    font-size: 2rem;
+    max-width: 1200px;
+    line-height: 2; /* ou toute autre valeur en pixels, em, %, etc. */
+}
+
+
+.post-detail h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 110px;
+  margin-bottom: 40px;
+}
+
+.post-detail h5 {
+ font-weight: bold;
+}
+
+
+.post-title h2 {
+ font-weight: bold;
+}
+
+.post-image {
+ max-width: 50%;
+}

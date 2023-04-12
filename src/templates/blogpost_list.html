@@ -1,12 +1,8 @@
-{% extends 'base.html' %}
-
-{% block title %}
-<title>Accueil du blog</title>
-{% endblock %}
+﻿{% extends 'base.html' %}
 
 {% block content %}
 <p style="height: 5px;"></p>
-<h1 style="font-size: 40px;">Le blog de Urgence PC 91</h1>
+<h1 style="font-size: 5rem; font-weight: bold;">Le blog de Urgence PC 91</h1>
 {% for post in blog %}
 <article>
 
@@ -24,13 +20,10 @@
     {% endif %}
     <!-- Gère l'affichage de l'image -->
 
-    <p class="post-excerpt">{{ post.content|safe|truncatewords:40 }}</p>
-
-    <h5 class="post-author">Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F Y' }}</h5>
-
+    <p class="post-excerpt">{{ post.content|safe|truncatewords:80 }}</p>
+    <h5 style="font-weight: bold; font-size: 12px;" class="post-author">Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F Y' }}</h5>
 
     <form action="{% url 'blog:post' slug=post.slug %}">
-
         <button class="btn btn-submit">Lire l'article</button>
     </form>
 
@@ -47,3 +40,4 @@
 {% endfor %}
 
 {% endblock %}
+
