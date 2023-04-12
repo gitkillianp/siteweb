@@ -63,3 +63,21 @@
 .post-image {
  max-width: 50%;
 }
+
+.container-fluid {
+    margin-top: 80px;
+}
+
+.panel-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulaire {
+    margin-top: 110px;
+    text-align: center;
+    line-height: 2; /* ou toute autre valeur en pixels, em, %, etc. */
+
+}
+

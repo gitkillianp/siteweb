@@ -1,5 +1,5 @@
 from django import forms
-from .models import FormulaireModel
+from formulaire.models import FormulaireModel
 
 PROBLEMES = (
     ("WiFi", "Problème avec mon réseau Wifi"),
@@ -34,7 +34,7 @@ class Formulaire(forms.ModelForm):
         fields = [
             "Email",
             "Type",
-            "Localité",
+            "Localite",
             "Description",
         ]
 

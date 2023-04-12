@@ -1,47 +1,22 @@
+{% extends 'base.html' %}
 
-	<div class="container-fluid">
+{% block title %}
+  <title>Formulaire</title>
+{% endblock %}
 
-		<ol class="breadcrumb">
-			<li><a href="/">Accueil</a></li>
-			<li class="active">Formulaire</li>
-		</ol>
+{% block content %}
+  <article class="formulaire">
+    <h1 style="font-size: 34px;">Formulaire de demande d'assistance.</h1>
 
-		<div class="row">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Valider">
+    </form>
 
-			<!-- Article main content -->
-			<article class="col-xs-12 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">Formulaire</h1>
-				</header>
+    <p style="height: 20px;"></p>
+    <div>{{ post.content|linebreaks|safe }}</div>
+    <p style="height: 20px;"></p>
+  </article>
 
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<h3 class="thin text-center">Formulaire de demande d'assistance</h3>
-							<p class="text-center text-muted">Décrivez nous en quelques lignes la nature de votre problème.</p>
-							<hr>
-
-							<form>
-								  <article class="formulaire">
-
-								    <form method="POST">
-								        {% csrf_token %}
-								        {{ form.as_p }}
-								        <input type="submit" value="Valider">
-								    </form>
-
-								    <p style="height: 20px;"></p>
-								    <div>{{ post.content|linebreaks|safe }}</div>
-								    <p style="height: 20px;"></p>
-								  </article>
-							</form>
-						</div>
-					</div>
-
-				</div>
-
-			</article>
-			<!-- /Article -->
-
-		</div>
-	</div>	<!-- /container -->
+{% endblock %}

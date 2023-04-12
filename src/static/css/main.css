@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 { font-family:"Open sans", Helvetica, Arial; }
 h1, .h1, h2, .h2, h3, .h3 { margin-top:30px; } 
 blockquote { font-style: italic; font-family: Georgia; color:#999; margin:30px 0 30px; }
 label { color: #777; }
-.thin { font-weight:300; }
+.thin { font-weight:400; font-size:3rem; }
 .page-title { margin-top:20px; font-weight:300; }
 .text-muted { color:#888; }
 .breadcrumb { background:none; padding:0; margin:30px 0 0px 0; }
