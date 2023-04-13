@@ -12,8 +12,7 @@
 
 .tableau {
     padding-left: 0;
-
-
+    width: 100%;
 }
 
 .tableau th, .tableau td {
@@ -23,7 +22,7 @@
 }
 
 .container-content {
-    margin-top: 80px;
+    margin-top: 90px;
     margin-left: 20px;
 }
 
@@ -76,8 +75,8 @@
 
 .formulaire {
     margin-top: 110px;
-    text-align: center;
-    line-height: 2; /* ou toute autre valeur en pixels, em, %, etc. */
+    text-align: left;
+    line-height: 1.5; /* ou toute autre valeur en pixels, em, %, etc. */
 
 }
 
