@@ -73,10 +73,18 @@
   align-items: center;
 }
 
-.formulaire {
-    margin-top: 110px;
-    text-align: left;
-    line-height: 1.5; /* ou toute autre valeur en pixels, em, %, etc. */
 
+.formulaire {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer2 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
