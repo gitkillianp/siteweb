@@ -10,8 +10,10 @@
     <p style="height: 20px;"></p>
 
     <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
+        <table>
+            {% csrf_token %}
+            {{ form.as_table }}
+        </table>
         <input type="submit" value="Valider">
     </form>
 

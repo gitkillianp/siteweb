@@ -13,7 +13,7 @@
       {% endif %}
   <!-- Balise <p> utilisée pour sauter une ligne -->
     <p style="height: 20px;"></p>
-    <div class="detail-detail">{{ post.content|linebreaks|safe }}</div>
+    <div class="detail-detail">{{ post.content|safe|linebreaks }}</div>
     <h5 class="post-author">Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F Y' }}</h5>
   </article>
 
