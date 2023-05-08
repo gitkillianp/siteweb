@@ -33,8 +33,9 @@ class Formulaire(forms.ModelForm):
         model = FormulaireModel
         fields = [
             "Email",
+            "Numéro_de_telephone",
             "Type",
-            "Localite",
+            "Localité",
             "Description",
         ]
 

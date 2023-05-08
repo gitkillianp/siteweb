@@ -29,9 +29,11 @@ LOCALITE = (
 
 class FormulaireModel(models.Model):
     Email = models.EmailField()
+    Numéro_de_telephone = models.CharField(max_length=10)
     Type = models.CharField(max_length=50, choices=PROBLEMES)
-    Localite = models.CharField(null=True, max_length=50, choices=LOCALITE)
+    Localité = models.CharField(null=True, max_length=50, choices=LOCALITE)
     Description = models.TextField(max_length=500)
+
 
     class Meta:
         verbose_name = "Formulaire"
