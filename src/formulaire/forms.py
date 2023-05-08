@@ -33,7 +33,7 @@ class Formulaire(forms.ModelForm):
         model = FormulaireModel
         fields = [
             "Email",
-            "Numéro_de_telephone",
+            "Numéro_de_téléphone",
             "Type",
             "Localité",
             "Description",

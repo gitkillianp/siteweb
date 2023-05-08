@@ -29,7 +29,7 @@ LOCALITE = (
 
 class FormulaireModel(models.Model):
     Email = models.EmailField()
-    Numéro_de_telephone = models.CharField(max_length=10)
+    Numéro_de_téléphone = models.CharField(max_length=10)
     Type = models.CharField(max_length=50, choices=PROBLEMES)
     Localité = models.CharField(null=True, max_length=50, choices=LOCALITE)
     Description = models.TextField(max_length=500)
