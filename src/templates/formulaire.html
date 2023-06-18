@@ -10,7 +10,7 @@
     <p style="height: 20px;"></p>
 
     <form method="POST">
-        <table>
+        <table class="table-form">
             {% csrf_token %}
             {{ form.as_table }}
         </table>
