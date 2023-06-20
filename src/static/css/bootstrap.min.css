@@ -23,7 +23,7 @@
 
 .container-content {
     margin-top: 90px;
-    margin-left: 20px;
+  /*  margin-left: 20px; */
 }
 
 .post-image {
@@ -114,7 +114,7 @@ input[type=submit]:hover {
   box-sizing: border-box;
   border-radius:5px;
   background-color: #FFFFF0;
-  padding:50px;
+  padding: 150px;
   width: 100%;
   /* redéfinition 400 + 2*20 */
   max-width: 1080px;
