@@ -121,6 +121,29 @@ input[type=submit]:hover {
   margin:0 auto;
 }
 
+.formulaire h1, {
+
+  color: #333333;
+  width: 100%;
+
+}
+
+@media (max-width: 500px) {
+.formulaire {
+
+  box-sizing: border-box;
+  border-radius:5px;
+  background-color: #FFFFF0;
+  padding:40px;
+  width: 100%;
+  /* redéfinition 400 + 2*20 */
+  max-width: 1080px;
+  margin:0 auto;
+
+}
+}
+
+
  /* fin ajout */
 
 
