@@ -1,5 +1,5 @@
 from django.contrib.sitemaps import Sitemap
-from .models import BlogPost
+from blog.models import BlogPost
 
 
 class BlogArticleSitemap(Sitemap):
@@ -33,6 +33,7 @@ class AboutSitemap(Sitemap):
 
     def location(self, obj):
         return "/about/"
+
 
 class BlogSitemap(Sitemap):
     changefreq = "weekly"

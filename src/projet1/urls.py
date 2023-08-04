@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import index, about
 
-# auto-modif from projet1 import settings = from . import settings
+# auto-modif from projet1 import settings = from . import settings (utile pour l'ajout static() après urlpatterns
 from . import settings
 
 # sitemaps
 from django.contrib.sitemaps.views import sitemap
-from blog.sitemaps import BlogSitemap, IndexSitemap, AboutSitemap, BlogArticleSitemap
+from .sitemaps import BlogSitemap, IndexSitemap, AboutSitemap, BlogArticleSitemap
+
 
 sitemaps = {
     'index': IndexSitemap,
@@ -31,6 +32,8 @@ sitemaps = {
     'about': AboutSitemap,
     'blog_article': BlogArticleSitemap,
 }
+
+# fin du sitemaps
 
 
 urlpatterns = [

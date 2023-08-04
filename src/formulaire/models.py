@@ -34,8 +34,5 @@ class FormulaireModel(models.Model):
     Localité = models.CharField(null=True, max_length=50, choices=LOCALITE)
     Description = models.TextField(max_length=500)
 
-
     class Meta:
         verbose_name = "Formulaire"
-
-
