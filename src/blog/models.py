@@ -11,6 +11,8 @@ def get_absolute_url():
 
 
 class BlogPost(models.Model):
+    meta_description = models.TextField(blank=True, null=True)
+    keywords = models.TextField(blank=True, null=True)
     title = models.CharField(max_length=255, unique=True, verbose_name="Titre")
     slug = models.SlugField(max_length=255, unique=True, blank=True)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
@@ -19,6 +21,7 @@ class BlogPost(models.Model):
     published = models.BooleanField(default=False, verbose_name="Publié")
     content = models.TextField(blank=True, verbose_name="Contenu")
     thumbnail = models.ImageField(blank=True, upload_to='mediablog')
+
 
     class Meta:
         ordering = ['-created_on']

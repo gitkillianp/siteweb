@@ -1,5 +1,9 @@
 ﻿{% extends 'base.html' %}
 
+    {% block meta_description %}{% if post.meta_description %}{{ post.meta_description }}{% else %}Découvrez Django. Apprenez à construire un site de A à Z et ce même sans aucune connaissances en informatique.{% endif %}{% endblock %}
+
+    {% block keywords %}{% if post.keywords %}{{ post.keywords }}{% else %}Django pour débutants, Tutoriel Python, Introduction à Django, Construire un site web avec Django, Fondamentaux Python pour le web, Django modèles et vues, Bases de données avec Django, Mise en forme avec Django Templates, Authentification Django, Formulaire avec Django, Python ORM, Django URL et routage, Déploiement d'un site Django, Gestion des médias avec Django, Django Admin pour les débutants, Tests unitaires en Django, Sécurisation d'un site Django, Intégration de JavaScript avec Django, Tutoriel Django REST Framework, Créer un blog avec Django, Tutoriel e-commerce Django, Django et AJAX, Extensions et paquets Django utiles, Mise à l'échelle d'une application Django, Django et API Web, Personnalisation du look avec Bootstrap et Django, Introduction à la programmation web pour les débutants, Meilleures pratiques avec Django, Python et développement web, Démarrer avec Django en zéro connaissance{% endif %}{% endblock %}
+
     {% block title %}
     <title>{{ post.title }}</title>
     {% endblock %}
@@ -9,10 +13,10 @@
     <h1>{{ post.title }}</h1>
   <!-- Ajouter la boucle if / endif pour ne pas avoir d'erreur sur les articles sans images. -->
       {% if post.thumbnail %}
-    <img src="{{ post.thumbnail.url }}" alt="L'image de l'article" class="image-article">
+    <img src="{{ post.thumbnail.url }}" alt="L'image de l'article" class="post-image">
+    <p style="height: 20px;"></p>
       {% endif %}
   <!-- Balise <p> utilisée pour sauter une ligne -->
-    <p style="height: 20px;"></p>
     <div class="detail-detail">{{ post.content|safe|linebreaks }}</div>
     <h5 class="post-author">Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F Y' }}</h5>
   </article>
