@@ -41,7 +41,7 @@ urlpatterns = [
     path('', index, name="index"),
     path('blog/', include('blog.urls')),
     path('formulaire/', include('formulaire.urls')),
-    path('admin/', admin.site.urls),
+    path('Sf23ghL250/', admin.site.urls),
     path('about/', about, name="about"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
